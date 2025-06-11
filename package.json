@@ -2,9 +2,9 @@
   "name": "problem-service",
   "version": "1.0.0",
   "main": "index.js",
-  "type" : "module",
+  "type": "module",
   "scripts": {
-    "dev" : "npx nodemon src/index.js",
+    "dev": "npx nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,6 +13,7 @@
   "dependencies": {
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "http-status-codes": "^2.3.0",
     "nodemon": "^3.1.10"
   }
 }
