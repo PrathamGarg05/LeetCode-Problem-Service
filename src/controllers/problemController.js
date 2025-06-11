@@ -13,7 +13,7 @@ export const addProblem = async (req,res,next) => {
     }
 }
 
-export const getProblem = async (req,res) => {
+export const getProblem = async (req,res,next) => {
     try{
         throw new NotImplemented('addProblem');
     } catch(error){
@@ -21,7 +21,7 @@ export const getProblem = async (req,res) => {
     }
 }
 
-export const getProblems = async (req,res) => {
+export const getProblems = async (req,res,next) => {
     try{
         throw new NotImplemented('addProblem');
     } catch(error){
@@ -29,7 +29,7 @@ export const getProblems = async (req,res) => {
     }
 }
 
-export const deleteProblem = async (req,res) => {
+export const deleteProblem = async (req,res,next) => {
     try{
         throw new NotImplemented('addProblem');
     } catch(error){
@@ -37,7 +37,7 @@ export const deleteProblem = async (req,res) => {
     }
 }
 
-export const updateProblem = async (req,res) => {
+export const updateProblem = async (req,res,next) => {
     try{
         throw new NotImplemented('addProblem');
     } catch(error){
