@@ -14,29 +14,33 @@ export const addProblem = async (req,res,next) => {
 }
 
 export const getProblem = async (req,res) => {
-    return res.status(StatusCodes.NOT_IMPLEMENTED)
-    .json({
-        message : " Function not implemeneted yet "
-    });
+    try{
+        throw new NotImplemented('addProblem');
+    } catch(error){
+        next(error);
+    }
 }
 
 export const getProblems = async (req,res) => {
-    return res.status(StatusCodes.NOT_IMPLEMENTED)
-    .json({
-        message : " Function not implemeneted yet "
-    });
+    try{
+        throw new NotImplemented('addProblem');
+    } catch(error){
+        next(error);
+    }
 }
 
 export const deleteProblem = async (req,res) => {
-    return res.status(StatusCodes.NOT_IMPLEMENTED)
-    .json({
-        message : " Function not implemeneted yet "
-    });
+    try{
+        throw new NotImplemented('addProblem');
+    } catch(error){
+        next(error);
+    }
 }
 
 export const updateProblem = async (req,res) => {
-    return res.status(StatusCodes.NOT_IMPLEMENTED)
-    .json({
-        message : " Function not implemeneted yet "
-    });
+    try{
+        throw new NotImplemented('addProblem');
+    } catch(error){
+        next(error);
+    }
 }
