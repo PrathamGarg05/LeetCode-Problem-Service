@@ -1,3 +1,4 @@
+import logger from "../config/logger.config.js";
 import NotFoundError from "../errors/NotFoundError.js";
 import { Problem } from "../models/problem.model.js";
 
@@ -44,6 +45,7 @@ class ProblemRepository {
         try{
             const deletedProblem = await Problem.findByIdAndDelete(problemId);
             if(!deletedProblem){
+                logger.error(`Problem with ${problemId} not found in db`);
                 throw new NotFoundError('Problem',problemId);
             }
             return deletedProblem;
