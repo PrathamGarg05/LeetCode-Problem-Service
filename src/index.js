@@ -2,6 +2,7 @@ import express from 'express'
 import { PORT } from './config/server.config.js';
 import apiRouter from './routes/apiRouter.js';
 import errorHandler from './utils/errorHandler.js';
+import { connectToDB } from './config/db.config.js';
 
 const app = express();
 
@@ -18,6 +19,8 @@ app.get('/ping', (req,res) => {
 // LAst middleware if any error comes
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-    console.log(`Server is running at PORT : ${PORT}`);
+app.listen(PORT, async () => {
+    console.log(`Server running at Port ${PORT}`);
+    await connectToDB();
+    console.log("Successfully connected to DB");
 })
