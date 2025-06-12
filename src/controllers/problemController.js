@@ -33,7 +33,13 @@ export const getProblem = async (req,res,next) => {
 
 export const getProblems = async (req,res,next) => {
     try{
-        throw new NotImplemented('addProblem');
+        const response = await problemService.getAllProblems();
+        return res.status(StatusCodes.OK).json({
+            success: true,
+            message: 'Fetched all problems',
+            data: response, 
+            error: {}
+        })
     } catch(error){
         next(error);
     }
