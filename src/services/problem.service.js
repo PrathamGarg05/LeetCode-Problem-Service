@@ -24,6 +24,11 @@ class ProblemService {
         return problems;
     }
 
+    async getProblemById(problemId){
+        const problem = await this.problemRepository.getProblemById(problemId);
+        return problem;
+    }
+
 }
 
 export default ProblemService
