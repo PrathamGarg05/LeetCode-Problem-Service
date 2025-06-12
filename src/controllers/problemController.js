@@ -53,7 +53,13 @@ export const getProblems = async (req,res,next) => {
 
 export const deleteProblem = async (req,res,next) => {
     try{
-        throw new NotImplemented('addProblem');
+        const deletedProblem = await problemService.deleteProblem(req.params.id);
+        return res.status(StatusCodes.OK).json({
+            success: true,
+            message: 'Deleted the problem',
+            data: deletedProblem, 
+            error: {}
+        })
     } catch(error){
         next(error);
     }

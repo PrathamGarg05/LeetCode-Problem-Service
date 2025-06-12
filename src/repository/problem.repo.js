@@ -38,7 +38,19 @@ class ProblemRepository {
             console.log(error);
             throw error;
         }
+    }
 
+    async deleteProblem(problemId){
+        try{
+            const deletedProblem = await Problem.findByIdAndDelete(problemId);
+            if(!deletedProblem){
+                throw new NotFoundError('Problem',problemId);
+            }
+            return deletedProblem;
+        } catch(error){
+            console.log(error);
+            throw error;
+        }
     }
 }
 
