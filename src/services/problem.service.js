@@ -29,6 +29,11 @@ class ProblemService {
         return problem;
     }
 
+    async deleteProblem(problemId){
+        const deletedProblem = await this.problemRepository.deleteProblem(problemId);
+        return deletedProblem;
+    }
+
 }
 
 export default ProblemService
